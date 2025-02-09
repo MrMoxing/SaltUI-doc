@@ -1,14 +1,14 @@
 # 组件总目录
 
-1. 标题栏：TitleBar
-2. 大标题：ItemOuterLargeTitle
-3. 圆角列：RoundedColumn
-4. 复选框：ItemCheck
-5. 按钮：ItemButton
-6. 标题：ItemTitle
-7. 标准项：Item
-8. 开关：ItemSwitcher
-9. 提示：ItemTip
+01. 标题栏：TitleBar
+02. 大标题：ItemOuterLargeTitle
+03. 圆角列：RoundedColumn
+04. 复选框：ItemCheck
+05. 按钮：ItemButton
+06. 标题：ItemTitle
+07. 标准项：Item
+08. 开关：ItemSwitcher
+09. 提示：ItemTip
 10. 信息：ItemInfo
 11. 值：ItemValue
 12. 输入框：ItemEdit
