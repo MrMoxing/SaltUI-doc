@@ -98,7 +98,7 @@ Item(
 ---
 
 ## 8. 开关：ItemSwitcher
-![](Assets/S50208-01491025_com.moriafly.salt.ui_we0o.png)
+![Alt text](Pictures/ItemSwitcher.png)
 ```kotlin
 ItemSwitcher(
     state = false,
@@ -110,7 +110,7 @@ ItemSwitcher(
 ---
 
 ## 9. 提示：ItemTip
-<img src="Assets/S50208-01500047_com.moriafly.salt.ui_x14w.png" width="1080"></img>
+![Alt text](Pictures/ItemTip.png)
 ```kotlin
 ItemTip(text = "提示信息")
 ```
@@ -118,7 +118,7 @@ ItemTip(text = "提示信息")
 ---
 
 ## 10. 信息：ItemInfo
-<img src="Assets/S50208-01494737_com.moriafly.salt.ui_2ejy.png" width="1080"></img>
+![Alt text](Pictures/ItemInfo.png)
 ```kotlin
 ItemInfo(
     text = "警告信息",
@@ -140,7 +140,7 @@ ItemValue(
 ---
 
 ## 12. 输入框：ItemEdit
-<img src="Assets/S50208-01542707_com.moriafly.salt.ui_cueh.png" width="1080"></img>
+![Alt text](Pictures/ItemEdit.png)
 ```kotlin
 ItemEdit(
     text = "",
@@ -152,7 +152,7 @@ ItemEdit(
 ---
 
 ## 13. 密码框：ItemEditPassword
-<img src="Assets/S50208-01550402_com.moriafly.salt.ui_4grk.png" width="1080"></img>
+![Alt text](Pictures/ItemEditPassword.png)
 ```kotlin
 ItemEditPassword(
     text = "",
