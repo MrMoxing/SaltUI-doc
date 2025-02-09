@@ -56,8 +56,7 @@ RoundedColumn {
 
 ## 4. 复选框：ItemCheck
 
-<img src="https://github.com/MrMoxing/SaltUI-doc/blob/main/Pictures/ItemCheck.png?raw=true" width="1080"></img>
-
+![Alt text](Pictures/ItemCheck.png)
 ```kotlin
 ItemCheck(
     state = false,
