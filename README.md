@@ -4,15 +4,15 @@ https://www.123865.com/s/hLmDVv-uVi8H
 
 # 组件总目录
 
-01. 标题栏：TitleBar
-02. 大标题：ItemOuterLargeTitle
-03. 圆角列：RoundedColumn
-04. 复选框：ItemCheck
-05. 按钮：ItemButton
-06. 文字按钮：TextButton
-07. 标题：ItemTitle
-08. 标准项：Item
-09. 开关：ItemSwitcher
+1. 标题栏：TitleBar
+2. 大标题：ItemOuterLargeTitle
+3. 圆角列：RoundedColumn
+4. 复选框：ItemCheck
+5. 按钮：ItemButton
+6. 文字按钮：TextButton
+7. 标题：ItemTitle
+8. 标准项：Item
+9. 开关：ItemSwitcher
 10. 提示：ItemTip
 11. 信息：ItemInfo
 12. 值：ItemValue
