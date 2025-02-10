@@ -96,7 +96,7 @@ Item(
   // iconColor = SaltTheme.colors.highlight,
    text = "标准 Item 控件，带图标（可选），副标题文本（可选）",
    sub = "Item 控件的副标题"
-                )
+)
 ```
 
 ---
@@ -104,11 +104,18 @@ Item(
 ## 8. 开关：ItemSwitcher
 ![Alt text](Pictures/ItemSwitcher.png)
 ```kotlin
-ItemSwitcher(
-    state = false,
-    onChange = { /* 状态改变回调 */ },
-    text = "开关"
-)
+    var switch by remember { mutableStateOf(false) }
+    ItemSwitcher(
+        state = switch,
+        onChange = {
+            switch = it
+        },
+        iconPainter = painterResource(Res.drawable.ic_verified),
+        iconColor = SaltTheme.colors.highlight,
+        text = "标准开关控件，带图标（可选），副标题文本（可选）",
+        sub = "开关控件的副标题"
+    )
+}
 ```
 
 ---
