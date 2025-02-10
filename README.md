@@ -104,8 +104,8 @@ Item(
 ## 8. 开关：ItemSwitcher
 ![Alt text](Pictures/ItemSwitcher.png)
 ```kotlin
-    var switch by remember { mutableStateOf(false) }
-    ItemSwitcher(
+var switch by remember { mutableStateOf(false) }
+ItemSwitcher(
         state = switch,
         onChange = {
             switch = it
