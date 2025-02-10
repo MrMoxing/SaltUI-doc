@@ -37,8 +37,8 @@ TitleBar(
 
 ```kotlin
 ItemOuterLargeTitle(
-    text = "大标题",
-    sub = "副标题"
+    text = "Hello, SaltUI 2.0",
+    sub = "SaltUI（UI for Salt Player） 是提取自椒盐音乐的 UI 风格组件，用以快速生成椒盐音乐风格用户界面。本库将会广泛用以椒盐系列 App 开发，以达到快速开发目的"
 )
 ```
 
@@ -59,9 +59,11 @@ RoundedColumn {
 ![Alt text](Pictures/ItemCheck.png)
 ```kotlin
 ItemCheck(
-    state =false, //开关启用状态
-    onChange = { /* 状态改变回调 */ },
-    text = "复选框"
+    state = true, //开关启用状态
+    onChange = {
+
+    },
+    text = "选中按钮"
 )
 ```
 
@@ -71,9 +73,11 @@ ItemCheck(
 
 ```kotlin
 ItemButton(
-    onClick = { /* 点击回调 */ },
-    text = "按钮"
-    primary = false//强调色状态
+    onClick = {
+
+    },
+    text = "默认按钮 TextButton 默认按钮 TextButton 默认按钮 TextButton",
+    primary = false//强调色开关
 )
 ```
 
@@ -92,8 +96,8 @@ ItemTitle(text = "标题")
 ```kotlin
 Item(
    onClick = {},
-  // iconPainter = painterResource(R.drawable.ic_qr_code),
-  // iconColor = SaltTheme.colors.highlight,
+   iconPainter = painterResource(R.drawable.ic_qr_code),
+   iconColor = SaltTheme.colors.highlight,
    text = "标准 Item 控件，带图标（可选），副标题文本（可选）",
    sub = "Item 控件的副标题"
 )
@@ -139,13 +143,9 @@ ItemInfo(
 
 ---
 
-## 11. 值：ItemValue
-<img src="Assets/S50208-01534347_com.moriafly.salt.ui_z8zf.png" width="1080"></img>
+![Alt text](Pictures/ItemValue.png)
 ```kotlin
-ItemValue(
-    text = "标题",
-    sub = "内容"
-)
+ItemValue(text = "Value 标题", sub = "Value 内容")
 ```
 
 ---
@@ -153,10 +153,13 @@ ItemValue(
 ## 12. 输入框：ItemEdit
 ![Alt text](Pictures/ItemEdit.png)
 ```kotlin
+var text by remember { mutableStateOf("") }
 ItemEdit(
-    text = "",
-    onChange = { /* 文本改变回调 */ },
-    hint = "输入框提示"
+    text = text,
+    onChange = {
+        text = it
+    },
+    hint = "HINT 这是输入框"
 )
 ```
 
@@ -165,10 +168,13 @@ ItemEdit(
 ## 13. 密码框：ItemEditPassword
 ![Alt text](Pictures/ItemEditPassword.png)
 ```kotlin
+var text2 by remember { mutableStateOf("") }
 ItemEditPassword(
-    text = "",
-    onChange = { /* 文本改变回调 */ },
-    hint = "密码输入框提示"
+    text = text2,
+    onChange = {
+        text2 = it
+    },
+    hint = "HINT 这是密码输入框"
 )
 ```
 
@@ -177,14 +183,19 @@ ItemEditPassword(
 ## 14. 弹出菜单：ItemPopup
 
 ```kotlin
+val popupState = rememberPopupState()
 ItemPopup(
     state = popupState,
-    text = "弹出菜单",
-    sub = "副标题"
-) {
-    PopupMenuItem(
-        onClick = { /* 点击回调 */ },
-        text = "选项一"
+    text = "Popup Item",
+    sub = "Value"
+) {//多个自行添加即可
+PopupMenuItem(
+        onClick = {
+            popupState.dismiss()
+        },
+        selected = true,
+        text = "选项一",
+        sub = "这是选项一的介绍信息"
     )
 }
 ```
@@ -194,37 +205,73 @@ ItemPopup(
 ## 15. 对话框：YesNoDialog, YesDialog, InputDialog
 
 ```kotlin
-YesNoDialog(
-    onDismissRequest = { /* 关闭回调 */ },
-    onConfirm = { /* 确认回调 */ },
-    title = "对话框标题",
-    content = "对话框内容"
+var yesNoDialog by remember { mutableStateOf(false) }
+if (yesNoDialog) {
+    YesNoDialog(
+        onDismissRequest = { yesNoDialog = false },
+        onConfirm = { yesNoDialog = false },
+        title = "YesNoDialog",
+        content = "这是一个是否确认的对话框"
+    )
+}
+Item(
+    onClick = {
+        yesNoDialog = true
+    },
+    text = "YesNoDialog",
+    arrowType = ItemArrowType.Link
 )
-
-YesDialog(
-    onDismissRequest = { /* 关闭回调 */ },
-    title = "对话框标题",
-    content = "对话框内容"
+___
+var yesDialog by remember { mutableStateOf(false) }
+if (yesDialog) {
+    YesDialog(
+        onDismissRequest = { yesDialog = false },
+        title = "YesDialog",
+        content = "这是一个是否确认的对话框"
+    )
+}
+Item(
+    onClick = {
+        yesDialog = true
+    },
+    text = "YesDialog"
 )
-
-InputDialog(
-    onDismissRequest = { /* 关闭回调 */ },
-    onConfirm = { /* 确认回调 */ },
-    title = "输入对话框标题",
-    text = "",
-    onChange = { /* 文本改变回调 */ }
-)
+___
+var inputDialog by remember { mutableStateOf(false) }
+if (inputDialog) {
+    var inputText by remember { mutableStateOf("") }
+    InputDialog(
+        onDismissRequest = {
+            inputDialog = false
+        },
+        onConfirm = {
+            inputDialog = false
+        },
+        title = "文本输入",
+        text = inputText,
+        onChange = {
+            inputText = it
+        }
+    )
+}
 ```
 
 ---
 
 ## 16. 滑块：ItemSlider
-<img src="Assets/S50208-01553905_com.moriafly.salt.ui_g4ou.png" width="1080"></img>
+![Alt text](Pictures/ItemSlider.png)
 ```kotlin
+var slider by remember { mutableStateOf(0f) }
 ItemSlider(
-    value = 0f,
-    onValueChange = { /* 值改变回调 */ },
-    text = "滑块"
+    value = slider,
+    onValueChange = {
+        slider = it
+    },
+    iconPainter = painterResource(Res.drawable.ic_qr_code),
+    iconColor = SaltTheme.colors.text,
+    text = "Slider 滑块",
+    // sub = "滑块介绍"
+    steps = 2
 )
 ```
 
@@ -235,12 +282,22 @@ ItemSlider(
 ```kotlin
 BottomBar {
     BottomBarItem(
-        state = true,
-        onClick = { /* 点击回调 */ },
-        painter = painterResource(Res.drawable.ic_qr_code),
-        text = "底部栏项"
+    state = true,
+    onClick = {
+    
+    },
+    painter = painterResource(Res.drawable.ic_qr_code),
+    text = "二维码"
     )
-}
+    BottomBarItem(
+    state = false,
+    onClick = {
+   
+    },
+    painter = painterResource(Res.drawable.ic_verified),
+    text = "认证"
+    )
+    }
 ```
 
 ---
