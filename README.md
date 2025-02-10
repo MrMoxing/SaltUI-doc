@@ -283,21 +283,17 @@ ItemSlider(
 BottomBar {
     BottomBarItem(
     state = true,
-    onClick = {
-    
-    },
+    onClick = {},
     painter = painterResource(Res.drawable.ic_qr_code),
     text = "二维码"
     )
     BottomBarItem(
     state = false,
-    onClick = {
-   
-    },
+    onClick = {},
     painter = painterResource(Res.drawable.ic_verified),
     text = "认证"
     )
-    }
+}
 ```
 
 ---
