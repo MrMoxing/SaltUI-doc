@@ -5,19 +5,19 @@
 03. 圆角列：RoundedColumn
 04. 复选框：ItemCheck
 05. 按钮：ItemButton
-06. 标题：ItemTitle
-07. 标准项：Item
-08. 开关：ItemSwitcher
-09. 提示：ItemTip
-10. 信息：ItemInfo
-11. 值：ItemValue
-12. 输入框：ItemEdit
-13. 密码框：ItemEditPassword
-14. 弹出菜单：ItemPopup
-15. 对话框：YesNoDialog, YesDialog, InputDialog
-16. 滑块：ItemSlider
-17. 底部栏：BottomBar
-18. 底部栏项：BottomBarItem
+06. 文字按钮：TextButton
+07. 标题：ItemTitle
+08. 标准项：Item
+09. 开关：ItemSwitcher
+10. 提示：ItemTip
+11. 信息：ItemInfo
+12. 值：ItemValue
+13. 输入框：ItemEdit
+14. 密码框：ItemEditPassword
+15. 弹出菜单：ItemPopup
+16. 对话框：YesNoDialog, YesDialog, InputDialog
+17. 滑块：ItemSlider
+18. 底部栏：BottomBar
 
 ---
 
@@ -81,9 +81,20 @@ ItemButton(
 )
 ```
 
+## 6. 文字按钮：TextButton
+
+```kotlin
+TextButton(
+    onClick = {
+        }
+    },
+    text = "确定",
+)
+```
+
 ---
 
-## 6. 小标题：ItemTitle
+## 7. 小标题：ItemTitle
 
 ```kotlin
 ItemTitle(text = "标题")
@@ -91,7 +102,7 @@ ItemTitle(text = "标题")
 
 ---
 
-## 7. 标准项：Item
+## 8. 标准项：Item
 
 ```kotlin
 Item(
@@ -105,7 +116,7 @@ Item(
 
 ---
 
-## 8. 开关：ItemSwitcher
+## 9. 开关：ItemSwitcher
 ![Alt text](Pictures/ItemSwitcher.png)
 ```kotlin
 var switch by remember { mutableStateOf(false) }
@@ -124,7 +135,7 @@ ItemSwitcher(
 
 ---
 
-## 9. 提示：ItemTip
+## 10. 提示：ItemTip
 ![Alt text](Pictures/ItemTip.png)
 ```kotlin
 ItemTip(text = "提示信息")
@@ -132,7 +143,7 @@ ItemTip(text = "提示信息")
 
 ---
 
-## 10. 信息：ItemInfo
+## 11. 信息：ItemInfo
 ![Alt text](Pictures/ItemInfo.png)
 ```kotlin
 ItemInfo(
@@ -143,6 +154,7 @@ ItemInfo(
 
 ---
 
+## 12. 值：ItemValue
 ![Alt text](Pictures/ItemValue.png)
 ```kotlin
 ItemValue(text = "Value 标题", sub = "Value 内容")
@@ -150,7 +162,7 @@ ItemValue(text = "Value 标题", sub = "Value 内容")
 
 ---
 
-## 12. 输入框：ItemEdit
+## 13. 输入框：ItemEdit
 ![Alt text](Pictures/ItemEdit.png)
 ```kotlin
 var text by remember { mutableStateOf("") }
@@ -165,7 +177,7 @@ ItemEdit(
 
 ---
 
-## 13. 密码框：ItemEditPassword
+## 14. 密码框：ItemEditPassword
 ![Alt text](Pictures/ItemEditPassword.png)
 ```kotlin
 var text2 by remember { mutableStateOf("") }
@@ -180,7 +192,7 @@ ItemEditPassword(
 
 ---
 
-## 14. 弹出菜单：ItemPopup
+## 15. 弹出菜单：ItemPopup
 
 ```kotlin
 val popupState = rememberPopupState()
@@ -188,7 +200,7 @@ ItemPopup(
     state = popupState,
     text = "Popup Item",
     sub = "Value"
-) {//多个自行添加即可
+) {
 PopupMenuItem(
         onClick = {
             popupState.dismiss()
@@ -196,13 +208,13 @@ PopupMenuItem(
         selected = true,
         text = "选项一",
         sub = "这是选项一的介绍信息"
-    )
+    )//多个重复添加即可
 }
 ```
 
 ---
 
-## 15. 对话框：YesNoDialog, YesDialog, InputDialog
+## 16. 对话框：YesNoDialog, YesDialog, InputDialog
 
 ```kotlin
 //YesNoDialog
@@ -261,7 +273,7 @@ if (inputDialog) {
 
 ---
 
-## 16. 滑块：ItemSlider
+## 17. 滑块：ItemSlider
 ![Alt text](Pictures/ItemSlider.png)
 ```kotlin
 var slider by remember { mutableStateOf(0f) }
@@ -280,7 +292,7 @@ ItemSlider(
 
 ---
 
-## 17. 底部栏：BottomBar
+## 18. 底部栏：BottomBar
 
 ```kotlin
 BottomBar {
@@ -295,21 +307,8 @@ BottomBar {
     onClick = {},
     painter = painterResource(Res.drawable.ic_verified),
     text = "认证"
-    )
+    )//多个自行添加
 }
-```
-
----
-
-## 18. 底部栏项：BottomBarItem
-
-```kotlin
-BottomBarItem(
-    state = true,
-    onClick = { /* 点击回调 */ },
-    painter = painterResource(Res.drawable.ic_qr_code),
-    text = "底部栏项"
-)
 ```
 
 ---
