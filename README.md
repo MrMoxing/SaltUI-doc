@@ -59,7 +59,7 @@ RoundedColumn {
 ![Alt text](Pictures/ItemCheck.png)
 ```kotlin
 ItemCheck(
-    state = false,
+    state =false, //开关启用状态
     onChange = { /* 状态改变回调 */ },
     text = "复选框"
 )
@@ -73,12 +73,13 @@ ItemCheck(
 ItemButton(
     onClick = { /* 点击回调 */ },
     text = "按钮"
+    primary = false//强调色状态
 )
 ```
 
 ---
 
-## 6. 标题：ItemTitle
+## 6. 小标题：ItemTitle
 
 ```kotlin
 ItemTitle(text = "标题")
@@ -90,9 +91,12 @@ ItemTitle(text = "标题")
 
 ```kotlin
 Item(
-    onClick = { /* 点击回调 */ },
-    text = "标准项"
-)
+   onClick = {},
+  // iconPainter = painterResource(R.drawable.ic_qr_code),
+  // iconColor = SaltTheme.colors.highlight,
+   text = "标准 Item 控件，带图标（可选），副标题文本（可选）",
+   sub = "Item 控件的副标题"
+                )
 ```
 
 ---
