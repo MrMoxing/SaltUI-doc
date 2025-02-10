@@ -205,6 +205,7 @@ PopupMenuItem(
 ## 15. 对话框：YesNoDialog, YesDialog, InputDialog
 
 ```kotlin
+//YesNoDialog
 var yesNoDialog by remember { mutableStateOf(false) }
 if (yesNoDialog) {
     YesNoDialog(
@@ -221,7 +222,8 @@ Item(
     text = "YesNoDialog",
     arrowType = ItemArrowType.Link
 )
-___
+
+//YesDialog
 var yesDialog by remember { mutableStateOf(false) }
 if (yesDialog) {
     YesDialog(
@@ -236,7 +238,8 @@ Item(
     },
     text = "YesDialog"
 )
-___
+
+//InputDialog
 var inputDialog by remember { mutableStateOf(false) }
 if (inputDialog) {
     var inputText by remember { mutableStateOf("") }
