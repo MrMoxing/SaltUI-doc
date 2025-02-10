@@ -48,6 +48,7 @@ ItemOuterLargeTitle(
 ---
 
 ## 3. 圆角列：RoundedColumn
+![Alt text](Pictures/RoundedColumn.png)
 
 ```kotlin
 RoundedColumn {
