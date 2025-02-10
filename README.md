@@ -137,7 +137,7 @@ ItemSwitcher(
         onChange = {
             switch = it
         },
-        iconPainter = painterResource(Res.drawable.ic_verified),
+        iconPainter = painterResource(R.drawable.ic_verified),
         iconColor = SaltTheme.colors.highlight,
         text = "标准开关控件，带图标（可选），副标题文本（可选）",
         sub = "开关控件的副标题"
@@ -299,7 +299,7 @@ ItemSlider(
     onValueChange = {
         slider = it
     },
-    iconPainter = painterResource(Res.drawable.ic_qr_code),
+    iconPainter = painterResource(R.drawable.ic_qr_code),
     iconColor = SaltTheme.colors.text,
     text = "Slider 滑块",
     // sub = "滑块介绍"
@@ -317,13 +317,13 @@ BottomBar {
     BottomBarItem(
     state = true,
     onClick = {},
-    painter = painterResource(Res.drawable.ic_qr_code),
+    painter = painterResource(R.drawable.ic_qr_code),
     text = "二维码"
     )
     BottomBarItem(
     state = false,
     onClick = {},
-    painter = painterResource(Res.drawable.ic_verified),
+    painter = painterResource(R.drawable.ic_verified),
     text = "认证"
     )//多个自行添加
 }
