@@ -23,6 +23,7 @@
 
 ## 1. 标题栏：TitleBar
 
+![Alt text](Pictures/TitleBar.png)
 
 ```kotlin
 TitleBar(
@@ -34,6 +35,7 @@ TitleBar(
 ---
 
 ## 2. 大标题：ItemOuterLargeTitle
+![Alt text](Pictures/ItemOuterLargeTitle.png)
 
 ```kotlin
 ItemOuterLargeTitle(
@@ -70,6 +72,7 @@ ItemCheck(
 ---
 
 ## 5. 按钮：ItemButton
+![Alt text](Pictures/ItemButton.png)
 
 ```kotlin
 ItemButton(
@@ -82,6 +85,7 @@ ItemButton(
 ```
 
 ## 6. 文字按钮：TextButton
+![Alt text](Pictures/TextButton.png)
 
 ```kotlin
 TextButton(
@@ -103,6 +107,7 @@ ItemTitle(text = "标题")
 ---
 
 ## 8. 标准项：Item
+![Alt text](Pictures/Item.png)
 
 ```kotlin
 Item(
@@ -193,6 +198,7 @@ ItemEditPassword(
 ---
 
 ## 15. 弹出菜单：ItemPopup
+![Alt text](Pictures/ItemPopup.png)
 
 ```kotlin
 val popupState = rememberPopupState()
@@ -215,6 +221,10 @@ PopupMenuItem(
 ---
 
 ## 16. 对话框：YesNoDialog, YesDialog, InputDialog
+![Alt text](Pictures/YesNoDialog.png)
+![Alt text](Pictures/YesDialog.png)
+![Alt text](Pictures/InputDialog.png)
+
 
 ```kotlin
 //YesNoDialog
@@ -293,6 +303,7 @@ ItemSlider(
 ---
 
 ## 18. 底部栏：BottomBar
+![Alt text](Pictures/BottomBar.png)
 
 ```kotlin
 BottomBar {
