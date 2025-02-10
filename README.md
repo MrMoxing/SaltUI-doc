@@ -1,5 +1,5 @@
 官方组件Demo Apk可在此处下载
-https://www.123865.com/s/hLmDVv-KVi8H
+https://www.123865.com/s/hLmDVv-uVi8H
 
 
 # 组件总目录
